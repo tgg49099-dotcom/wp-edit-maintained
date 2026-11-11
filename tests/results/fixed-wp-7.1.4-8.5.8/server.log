@@ -1,0 +1,61 @@
+[Wed Nov 11 12:29:48 2026] PHP 8.5.8 Development Server (http://127.0.0.1:8091) started
+[Wed Nov 11 12:29:48 2026] 127.0.0.1:51554 Accepted
+[Wed Nov 11 12:29:49 2026] 127.0.0.1:51554 [200]: GET /
+[Wed Nov 11 12:29:49 2026] 127.0.0.1:51554 Closing
+[Wed Nov 11 12:29:52 2026] 127.0.0.1:51568 Accepted
+[Wed Nov 11 12:29:52 2026] 127.0.0.1:51568 [200]: GET /?p=4
+[Wed Nov 11 12:29:52 2026] 127.0.0.1:51568 Closing
+[Wed Nov 11 12:29:52 2026] 127.0.0.1:51576 Accepted
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:51576 [302]: GET /wp-admin/post.php?post=4&action=edit
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:51576 Closing
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:40400 Accepted
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:40400 [200]: GET /wp-admin/post.php?post=4&action=edit
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:40400 Closing
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:40404 Accepted
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:40404 [302]: POST /wp-admin/post.php
+[Wed Nov 11 12:29:54 2026] 127.0.0.1:40404 Closing
+[Wed Nov 11 12:29:55 2026] 127.0.0.1:40420 Accepted
+[Wed Nov 11 12:29:56 2026] 127.0.0.1:40420 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=buttons
+[Wed Nov 11 12:29:56 2026] 127.0.0.1:40420 Closing
+[Wed Nov 11 12:29:56 2026] 127.0.0.1:40436 Accepted
+[Wed Nov 11 12:29:56 2026] 127.0.0.1:40436 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=global
+[Wed Nov 11 12:29:56 2026] 127.0.0.1:40436 Closing
+[Wed Nov 11 12:29:56 2026] 127.0.0.1:40450 Accepted
+[Wed Nov 11 12:29:57 2026] 127.0.0.1:40450 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=general
+[Wed Nov 11 12:29:57 2026] 127.0.0.1:40450 Closing
+[Wed Nov 11 12:29:57 2026] 127.0.0.1:40466 Accepted
+[Wed Nov 11 12:29:58 2026] 127.0.0.1:40466 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=posts
+[Wed Nov 11 12:29:58 2026] 127.0.0.1:40466 Closing
+[Wed Nov 11 12:29:58 2026] 127.0.0.1:40476 Accepted
+[Wed Nov 11 12:29:58 2026] 127.0.0.1:40476 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=editor
+[Wed Nov 11 12:29:58 2026] 127.0.0.1:40476 Closing
+[Wed Nov 11 12:29:58 2026] 127.0.0.1:40492 Accepted
+[Wed Nov 11 12:29:59 2026] 127.0.0.1:40492 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=extras
+[Wed Nov 11 12:29:59 2026] 127.0.0.1:40492 Closing
+[Wed Nov 11 12:29:59 2026] 127.0.0.1:40502 Accepted
+[Wed Nov 11 12:30:00 2026] 127.0.0.1:40502 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=user_specific
+[Wed Nov 11 12:30:00 2026] 127.0.0.1:40502 Closing
+[Wed Nov 11 12:30:00 2026] 127.0.0.1:40518 Accepted
+[Wed Nov 11 12:30:00 2026] 127.0.0.1:40518 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=database
+[Wed Nov 11 12:30:00 2026] 127.0.0.1:40518 Closing
+[Wed Nov 11 12:30:00 2026] 127.0.0.1:40528 Accepted
+[Wed Nov 11 12:30:01 2026] 127.0.0.1:40528 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=about
+[Wed Nov 11 12:30:01 2026] 127.0.0.1:40528 Closing
+[Wed Nov 11 12:30:01 2026] 127.0.0.1:40532 Accepted
+[Wed Nov 11 12:30:02 2026] 127.0.0.1:40532 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=global
+[Wed Nov 11 12:30:02 2026] 127.0.0.1:40532 Closing
+[Wed Nov 11 12:30:02 2026] 127.0.0.1:40542 Accepted
+[Wed Nov 11 12:30:02 2026] 127.0.0.1:40542 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=general
+[Wed Nov 11 12:30:02 2026] 127.0.0.1:40542 Closing
+[Wed Nov 11 12:30:02 2026] 127.0.0.1:40546 Accepted
+[Wed Nov 11 12:30:03 2026] 127.0.0.1:40546 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=posts
+[Wed Nov 11 12:30:03 2026] 127.0.0.1:40546 Closing
+[Wed Nov 11 12:30:03 2026] 127.0.0.1:40562 Accepted
+[Wed Nov 11 12:30:04 2026] 127.0.0.1:40562 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=editor
+[Wed Nov 11 12:30:04 2026] 127.0.0.1:40562 Closing
+[Wed Nov 11 12:30:04 2026] 127.0.0.1:38400 Accepted
+[Wed Nov 11 12:30:04 2026] 127.0.0.1:38400 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=extras
+[Wed Nov 11 12:30:04 2026] 127.0.0.1:38400 Closing
+[Wed Nov 11 12:30:05 2026] 127.0.0.1:38404 Accepted
+[Wed Nov 11 12:30:05 2026] 127.0.0.1:38404 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=user_specific
+[Wed Nov 11 12:30:05 2026] 127.0.0.1:38404 Closing

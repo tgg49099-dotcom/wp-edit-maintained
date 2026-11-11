@@ -1,0 +1,6 @@
+ROUGE | T1 activation | 8 diagnostic(s) : includes/functions.php on line 11;includes/functions.php on line 126;includes/functions.php on line 135;
+VERT | T3 article sur le front | HTTP 200, 0 diagnostic
+VERT | T4 ecran d'edition | HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT | T5 enregistrement de l'article | contenu enregistre, 0 diagnostic
+VERT | T6 pages de reglages | 9 onglets HTTP 200, 0 diagnostic
+ROUGE | T7 enregistrement des reglages | 1 erreur(s) fatale(s) : user_specific:fatale | Uncaught TypeError: Cannot access offset of type string on string in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp

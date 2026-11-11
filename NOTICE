@@ -1,0 +1,66 @@
+WP Edit - compatibility fork - NOTICE
+=====================================
+
+Plugin:            WP Edit
+Original version:  4.0.4 (released on WordPress.org on 2018-10-15)
+Original author:   Josh Lobe ("Josh"), https://profiles.wordpress.org/josh401/
+Original site:     https://wpeditpro.com
+Original page:     https://wordpress.org/plugins/wp-edit/
+Licence:           GPL-2.0-or-later
+                   (plugin header: "License: GPL2"; readme.txt: "License: GPLv2 or later")
+Copyright:         (c) Josh Lobe - all rights reserved for the original work
+
+This repository is an UNOFFICIAL compatibility fork maintained by Tgg Labs
+(https://github.com/tgg49099-dotcom).
+
+WHO DOES WHAT
+-------------
+* Josh (Josh Lobe) is the author of WP Edit. He owns the plugin code, the
+  plugin name, the WordPress.org plugin directory entry, the readme.txt
+  contents, the translations, the bundled images and the "WP Edit PRO"
+  commercial product.
+* Tgg Labs wrote ONLY the compatibility patches listed in
+  CHANGELOG-COMPAT.md, the test harness in tests/, and the packaging of this
+  repository. Tgg Labs is not the author of WP Edit, does not sell it, does
+  not own the wordpress.org listing, and does not host any paid version of it.
+* Every file of the original release is redistributed here unchanged, with its
+  original copyright notice intact, except for the two PHP files that carry
+  the compatibility patches. The patches are marked with comments in the code.
+
+NO PUBLICATION
+--------------
+Nothing in this repository has been submitted to the WordPress.org plugin
+directory, and the `wp-edit` slug there is not affected by this fork. The
+WordPress.org page, its reviews, its support forum and its SVN repository
+remain under the control of the original author.
+
+LICENCE
+-------
+This fork is distributed under the same licence as the original plugin:
+the GNU General Public License, version 2 or (at your option) any later
+version. The full text of the GNU General Public License version 2 is in the
+LICENSE file.
+
+The original 4.0.4 ZIP published on WordPress.org contained no copy of the
+licence text itself; the LICENSE file of this repository supplies the GNU
+General Public License version 2 that the plugin's own headers declare
+("GPL2" in main.php, "GPLv2 or later" in readme.txt), unchanged and in full.
+
+THIRD-PARTY CODE
+----------------
+The plugin bundles and loads third-party components that keep their own
+licences and are not covered by this NOTICE. They are redistributed here
+untouched:
+
+* wp-edit/plugins/... contains TinyMCE editor plugins of the TinyMCE project
+  (table, code, anchor, hr, print, preview, emoticons, ...), used by the
+  editor that ships with WordPress.
+* wp-edit/plugins/advlink/ contains the "Advanced Link" dialog, whose header
+  credits Josh Lobe (http://ultimatetinymcepro.com); it loads jQuery 1.11.0
+  and jQuery UI from the public CDNs code.jquery.com and
+  ajax.googleapis.com.
+* the jQuery UI themes listed in the settings screen are those distributed with
+  WordPress itself.
+
+None of these files was modified by this fork. The licences of those projects
+are the ones that apply to them.

@@ -1,0 +1,69 @@
+[Wed Nov 11 12:28:19 2026] PHP 8.5.8 Development Server (http://127.0.0.1:8091) started
+[Wed Nov 11 12:28:19 2026] 127.0.0.1:54520 Accepted
+[Wed Nov 11 12:28:19 2026] 127.0.0.1:54520 [200]: GET /
+[Wed Nov 11 12:28:19 2026] 127.0.0.1:54520 Closing
+[Wed Nov 11 12:28:22 2026] 127.0.0.1:54526 Accepted
+[Wed Nov 11 12:28:22 2026] 127.0.0.1:54526 [200]: GET /?p=4
+[Wed Nov 11 12:28:22 2026] 127.0.0.1:54526 Closing
+[Wed Nov 11 12:28:22 2026] 127.0.0.1:54540 Accepted
+[Wed Nov 11 12:28:24 2026] 127.0.0.1:54540 [302]: GET /wp-admin/post.php?post=4&action=edit
+[Wed Nov 11 12:28:24 2026] 127.0.0.1:54540 Closing
+[Wed Nov 11 12:28:24 2026] 127.0.0.1:40370 Accepted
+[Wed Nov 11 12:28:25 2026] 127.0.0.1:40370 [200]: GET /wp-admin/post.php?post=4&action=edit
+[Wed Nov 11 12:28:25 2026] 127.0.0.1:40370 Closing
+[Wed Nov 11 12:28:25 2026] 127.0.0.1:40378 Accepted
+[Wed Nov 11 12:28:25 2026] 127.0.0.1:40378 [302]: POST /wp-admin/post.php
+[Wed Nov 11 12:28:25 2026] 127.0.0.1:40378 Closing
+[Wed Nov 11 12:28:26 2026] 127.0.0.1:40386 Accepted
+[Wed Nov 11 12:28:26 2026] 127.0.0.1:40386 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=buttons
+[Wed Nov 11 12:28:26 2026] 127.0.0.1:40386 Closing
+[Wed Nov 11 12:28:26 2026] 127.0.0.1:40392 Accepted
+[Wed Nov 11 12:28:27 2026] 127.0.0.1:40392 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=global
+[Wed Nov 11 12:28:27 2026] 127.0.0.1:40392 Closing
+[Wed Nov 11 12:28:27 2026] 127.0.0.1:40398 Accepted
+[Wed Nov 11 12:28:28 2026] 127.0.0.1:40398 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=general
+[Wed Nov 11 12:28:28 2026] 127.0.0.1:40398 Closing
+[Wed Nov 11 12:28:28 2026] 127.0.0.1:40404 Accepted
+[Wed Nov 11 12:28:28 2026] 127.0.0.1:40404 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=posts
+[Wed Nov 11 12:28:28 2026] 127.0.0.1:40404 Closing
+[Wed Nov 11 12:28:28 2026] 127.0.0.1:40416 Accepted
+[Wed Nov 11 12:28:29 2026] 127.0.0.1:40416 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=editor
+[Wed Nov 11 12:28:29 2026] 127.0.0.1:40416 Closing
+[Wed Nov 11 12:28:29 2026] 127.0.0.1:40428 Accepted
+[Wed Nov 11 12:28:30 2026] 127.0.0.1:40428 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=extras
+[Wed Nov 11 12:28:30 2026] 127.0.0.1:40428 Closing
+[Wed Nov 11 12:28:30 2026] 127.0.0.1:40436 Accepted
+[Wed Nov 11 12:28:30 2026] 127.0.0.1:40436 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=user_specific
+[Wed Nov 11 12:28:30 2026] 127.0.0.1:40436 Closing
+[Wed Nov 11 12:28:30 2026] 127.0.0.1:40442 Accepted
+[Wed Nov 11 12:28:31 2026] 127.0.0.1:40442 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=database
+[Wed Nov 11 12:28:31 2026] 127.0.0.1:40442 Closing
+[Wed Nov 11 12:28:31 2026] 127.0.0.1:40444 Accepted
+[Wed Nov 11 12:28:32 2026] 127.0.0.1:40444 [200]: GET /wp-admin/admin.php?page=wp_edit_options&tab=about
+[Wed Nov 11 12:28:32 2026] 127.0.0.1:40444 Closing
+[Wed Nov 11 12:28:32 2026] 127.0.0.1:40454 Accepted
+[Wed Nov 11 12:28:32 2026] 127.0.0.1:40454 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=global
+[Wed Nov 11 12:28:32 2026] 127.0.0.1:40454 Closing
+[Wed Nov 11 12:28:32 2026] 127.0.0.1:40462 Accepted
+[Wed Nov 11 12:28:33 2026] 127.0.0.1:40462 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=general
+[Wed Nov 11 12:28:33 2026] 127.0.0.1:40462 Closing
+[Wed Nov 11 12:28:33 2026] 127.0.0.1:40476 Accepted
+[Wed Nov 11 12:28:34 2026] 127.0.0.1:40476 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=posts
+[Wed Nov 11 12:28:34 2026] 127.0.0.1:40476 Closing
+[Wed Nov 11 12:28:34 2026] 127.0.0.1:33008 Accepted
+[Wed Nov 11 12:28:34 2026] 127.0.0.1:33008 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=editor
+[Wed Nov 11 12:28:34 2026] 127.0.0.1:33008 Closing
+[Wed Nov 11 12:28:34 2026] 127.0.0.1:33014 Accepted
+[Wed Nov 11 12:28:35 2026] 127.0.0.1:33014 [200]: POST /wp-admin/admin.php?page=wp_edit_options&tab=extras
+[Wed Nov 11 12:28:35 2026] 127.0.0.1:33014 Closing
+[Wed Nov 11 12:28:35 2026] 127.0.0.1:33022 Accepted
+[Wed Nov 11 12:28:35 2026] 127.0.0.1:33022 [500]: POST /wp-admin/admin.php?page=wp_edit_options&tab=user_specific - Uncaught TypeError: Cannot access offset of type string on string in /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-content/plugins/wp-edit/main.php:2521
+Stack trace:
+#0 /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-includes/class-wp-hook.php(353): wp_edit_class->load_page('')
+#1 /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-includes/class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#2 /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-includes/plugin.php(523): WP_Hook->do_action(Array)
+#3 /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-admin/admin.php(242): do_action('load-toplevel_p...')
+#4 {main}
+  thrown in /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-content/plugins/wp-edit/main.php on line 2521
+sh: 1: /usr/sbin/sendmail: not found
+[Wed Nov 11 12:28:35 2026] 127.0.0.1:33022 Closing

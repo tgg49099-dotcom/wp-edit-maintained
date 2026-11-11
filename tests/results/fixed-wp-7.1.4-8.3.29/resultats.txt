@@ -1,0 +1,6 @@
+VERT | T1 activation | aucune erreur fatale, 0 diagnostic
+VERT | T3 article sur le front | HTTP 200, 0 diagnostic
+VERT | T4 ecran d'edition | HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT | T5 enregistrement de l'article | contenu enregistre, 0 diagnostic
+VERT | T6 pages de reglages | 9 onglets HTTP 200, 0 diagnostic
+VERT | T7 enregistrement des reglages | 6 formulaires enregistres, 0 diagnostic

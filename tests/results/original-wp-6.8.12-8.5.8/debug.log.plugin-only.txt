@@ -1,0 +1,10 @@
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 11
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 126
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 135
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 141
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 147
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 173
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 231
+[11-Nov-2026 11:27:34 UTC] PHP Warning:  Trying to access array offset on false in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/includes/functions.php on line 299
+[11-Nov-2026 11:27:50 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/main.php:2521
+  thrown in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp-content/plugins/wp-edit/main.php on line 2521
