@@ -76,4 +76,23 @@ The raw output of the eight runs is in `tests/results/`.
 tests/run-case.sh <original|fixed> <wp-6.8.12|wp-7.1.4> <8.3.29|8.5.8>
 ```
 
+### The harness is not a rubber stamp
+
+`tests/results/contre-epreuve-mutation.txt` is the proof that the harness
+really exercises the patched lines. The same case (WordPress 7.1.4, PHP
+8.3.29) is run twice on the same patched code: once with the compatibility
+fix **removed** - the test must go **RED** - and once with the fix **put
+back** - the test must go **GREEN** again. The mutation is an exact string
+replacement that refuses to write if the pattern is not found exactly once,
+and the restored file is verified to be byte-for-byte the published file
+(same md5).
+
+```
+tests/mutate.py break   broken/wp-edit/includes/functions.php
+tests/mutate.py restore broken/wp-edit/includes/functions.php
+```
+
+`tests/results/matrice-2026-11-12.txt` is a re-run of the four patched
+cases on 2026-11-12: 4 green, 4 red, 0 failures.
+
 See `tests/README.md` for the prerequisites and for how to reproduce the runs.

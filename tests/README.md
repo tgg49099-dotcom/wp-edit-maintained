@@ -15,7 +15,8 @@ serves it with the PHP built-in web server.
 | `setup-env.sh` | downloads and installs a WordPress version (6.8.12 or 7.1.4) in an isolated folder, with the SQLite drop-in and a `wp-config.php` that turns `WP_DEBUG` and `WP_DEBUG_LOG` on |
 | `lib.sh` | helpers: PHP binaries, WP-CLI wrapper, environment reset, diagnostics counter, authentication cookies, server start/stop |
 | `run-case.sh` | one test case = (variant) x (WordPress) x (PHP) |
-| `results/` | the raw output of the eight runs that were made on 2026-11-11 |
+| `results/` | the raw output of the eight runs that were made on 2026-11-11, the re-run of the four patched cases made on 2026-11-12, and the two counter-proofs (`contre-epreuve-rouge.txt`, `contre-epreuve-mutation.txt`) |
+| `mutate.py` | removes or restores the compatibility fix, by exact string replacement that refuses to write if the pattern is not found exactly once (`MUT_PATTERN=wpe`) |
 
 ## What a case checks
 

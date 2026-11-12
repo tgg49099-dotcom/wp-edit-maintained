@@ -1,0 +1,164 @@
+==============================================================================
+CONTRE-EPREUVE ROUGE - WP Edit 4.0.4
+Le meme test, dans la meme matrice, sur le code officiel (original) et sur
+le code corrige (fixed).  Sortie brute, non reecrite.
+==============================================================================
+
+Matrice : {WordPress 6.8.12, WordPress 7.1.4} x {PHP 8.3.29, PHP 8.5.8}
+Les 8 cas sont sequentiels.  Les journaux complets sont dans results/<cas>/.
+Re-execution du 12/11/2026 : la matrice complete (8 cas) est aussi dans
+results/matrice.txt ; la preuve par mutation est dans
+results/contre-epreuve-mutation.txt.
+
+
+##############################################################################
+# CODE OFFICIEL 4.0.4 (non corrige)
+##############################################################################
+------------------------------------------------------------------------------
+--- CAS original-wp-7.1.4-8.3.29 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : original / WordPress wp-7.1.4 / PHP 8.3.29
+==============================================================
+ROUGE  T1 activation                              8 diagnostic(s) : includes/functions.php on line 11;includes/functions.php on line 126;includes/functions.php on line 135;
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+ROUGE  T7 enregistrement des reglages             1 erreur(s) fatale(s) : user_specific:fatale | Uncaught TypeError: Cannot access offset of type string on string in /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-
+
+RESULTATS : 4 vert(s), 2 rouge(s)
+VERDICT : ROUGE
+
+------------------------------------------------------------------------------
+--- CAS original-wp-7.1.4-8.5.8 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : original / WordPress wp-7.1.4 / PHP 8.5.8
+==============================================================
+ROUGE  T1 activation                              8 diagnostic(s) : includes/functions.php on line 11;includes/functions.php on line 126;includes/functions.php on line 135;
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+ROUGE  T7 enregistrement des reglages             1 erreur(s) fatale(s) : user_specific:fatale | Uncaught TypeError: Cannot access offset of type string on string in /work/wp/reprise/wp-edit/env/wp-7.1.4/wordpress/wp-
+
+RESULTATS : 4 vert(s), 2 rouge(s)
+VERDICT : ROUGE
+
+------------------------------------------------------------------------------
+--- CAS original-wp-6.8.12-8.3.29 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : original / WordPress wp-6.8.12 / PHP 8.3.29
+==============================================================
+ROUGE  T1 activation                              8 diagnostic(s) : includes/functions.php on line 11;includes/functions.php on line 126;includes/functions.php on line 135;
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+ROUGE  T7 enregistrement des reglages             1 erreur(s) fatale(s) : user_specific:fatale | Uncaught TypeError: Cannot access offset of type string on string in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp
+
+RESULTATS : 4 vert(s), 2 rouge(s)
+VERDICT : ROUGE
+
+------------------------------------------------------------------------------
+--- CAS original-wp-6.8.12-8.5.8 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : original / WordPress wp-6.8.12 / PHP 8.5.8
+==============================================================
+ROUGE  T1 activation                              8 diagnostic(s) : includes/functions.php on line 11;includes/functions.php on line 126;includes/functions.php on line 135;
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+ROUGE  T7 enregistrement des reglages             1 erreur(s) fatale(s) : user_specific:fatale | Uncaught TypeError: Cannot access offset of type string on string in /work/wp/reprise/wp-edit/env/wp-6.8.12/wordpress/wp
+
+RESULTATS : 4 vert(s), 2 rouge(s)
+VERDICT : ROUGE
+
+
+##############################################################################
+# CODE CORRIGE (ce depot)
+##############################################################################
+------------------------------------------------------------------------------
+--- CAS fixed-wp-7.1.4-8.3.29 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : fixed / WordPress wp-7.1.4 / PHP 8.3.29
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+------------------------------------------------------------------------------
+--- CAS fixed-wp-7.1.4-8.5.8 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : fixed / WordPress wp-7.1.4 / PHP 8.5.8
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+------------------------------------------------------------------------------
+--- CAS fixed-wp-6.8.12-8.3.29 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : fixed / WordPress wp-6.8.12 / PHP 8.3.29
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+------------------------------------------------------------------------------
+--- CAS fixed-wp-6.8.12-8.5.8 ---
+------------------------------------------------------------------------------
+[sortie brute du cas]
+==============================================================
+CAS : fixed / WordPress wp-6.8.12 / PHP 8.5.8
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+

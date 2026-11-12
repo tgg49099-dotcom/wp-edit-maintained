@@ -13,6 +13,11 @@ Rules that were applied to every line below:
 * end-of-line sequences (CRLF) and byte content of untouched files are
   preserved exactly.
 
+Line numbers cited below are the line numbers **in the patched file published
+in this repository**, so that every change can be located directly. The only
+exceptions are quoted error messages and quotes from the original release,
+which keep their own numbering and are labelled as such.
+
 Only **two** files were modified:
 
 | file | bytes changed | what |
@@ -105,7 +110,7 @@ result and the same `selected="selected"` output.
 +$selected = (($options_global['jquery_theme'] ?? null)==$jquery_theme) ? 'selected="selected"' : '';
 ```
 
-### 2.2 Option write in `$db_buttons` (lines 2167-2168)
+### 2.2 Option write in `$db_buttons` (lines 2168-2169)
 
 Writing into an option that is `false` is a **Deprecated** notice on PHP 8.1+
 ("Automatic conversion of false to array is deprecated"). PHP 7 auto-vivified
@@ -119,14 +124,14 @@ normalised to an array first, and the missing key is read as `''`:
 +$db_buttons['tmce_container'] = ( $db_buttons['tmce_container'] ?? '' ).$each_button;
 ```
 
-### 2.3 `foreach()` over an option that may be `false` (line 2191)
+### 2.3 `foreach()` over an option that may be `false` (line 2193)
 
 ```diff
  $options_buttons = get_option('wp_edit_buttons');
 +if ( ! is_array( $options_buttons ) ) { $options_buttons = array(); }
 ```
 
-### 2.4 Five option writes (lines 2282, 2313, 2415, 2453, 2486)
+### 2.4 Five option writes (lines 2285, 2317, 2420, 2459, 2493)
 
 `$options_global`, `$options_general`, `$options_posts`, `$options_editor` and
 `$options_extras` are written key by key. Each one is normalised to an array
@@ -139,7 +144,7 @@ before the writes, which is exactly what PHP 7 did silently:
 
 (idem for `general`, `posts`, `editor`, `extras`).
 
-### 2.5 `explode()` on a missing key (line 2907)
+### 2.5 `explode()` on a missing key (line 2924)
 
 `explode(' ', null)` is deprecated since PHP 8.1. The key is read with
 `?? ''`, which is the value PHP 7 used.
@@ -149,15 +154,15 @@ before the writes, which is exactly what PHP 7 did silently:
 +$final_options = array_merge(explode(' ', ( $options_buttons['toolbar1'] ?? '' )), explode(' ', ( $options_buttons['toolbar2'] ?? '' )));
 ```
 
-### 2.6 Toolbar 1 and toolbar 2 read in the mce filters (lines 2987, 3033)
+### 2.6 Toolbar 1 and toolbar 2 read in the mce filters (lines 3004, 3050)
 
 ```diff
 -$options_toolbar1 = $options['toolbar1'];
 +$options_toolbar1 = ( $options['toolbar1'] ?? '' );
 ```
-(idem for `toolbar2` on line 3033).
+(idem for `toolbar2` on line 3050).
 
-### 2.7 The "User Specific" settings form - **fatal error** (lines 2519-2534)
+### 2.7 The "User Specific" settings form - **fatal error** (lines 2527-2549)
 
 This is the only place where the plugin does not just warn but **kills the
 request** on PHP 8:

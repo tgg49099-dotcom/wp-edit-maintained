@@ -1,0 +1,246 @@
+==============================================================================
+COMPATIBILITY MATRIX - WP Edit 4.0.4 - RE-RUN ON 2026-11-12
+==============================================================================
+
+These are the raw outputs of the 4 "fixed" cases, replayed on 2026-11-12
+with the same harness (tests/run-case.sh) that is published in this
+repository, on the same real WordPress installations (SQLite) and the same
+PHP binaries.
+
+Every case must be GREEN: the plugin activates, its screens answer HTTP 200,
+its forms really save, and the plugin writes NOTHING into
+wp-content/debug.log.
+
+The full 8-case matrix (4 "original" + 4 "fixed") is in results/matrice.txt.
+The proof that this harness really tests the patched lines is in
+results/contre-epreuve-mutation.txt.
+
+WordPress : wp-7.1.4 (7.1.4), wp-6.8.12 (6.8.12)
+PHP       : 8.3.29, 8.5.8
+Date      : 2026-11-12
+
+------------------------------------------------------------------------------
+CASE fixed / wp-7.1.4 / 8.3.29   -> GREEN (6 green, 0 red)
+------------------------------------------------------------------------------
+==============================================================
+CAS : fixed / WordPress wp-7.1.4 / PHP 8.3.29
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+------------------------------------------------------------------------------
+CASE fixed / wp-7.1.4 / 8.5.8   -> GREEN (6 green, 0 red)
+------------------------------------------------------------------------------
+==============================================================
+CAS : fixed / WordPress wp-7.1.4 / PHP 8.5.8
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+------------------------------------------------------------------------------
+CASE fixed / wp-6.8.12 / 8.3.29   -> GREEN (6 green, 0 red)
+------------------------------------------------------------------------------
+==============================================================
+CAS : fixed / WordPress wp-6.8.12 / PHP 8.3.29
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+------------------------------------------------------------------------------
+CASE fixed / wp-6.8.12 / 8.5.8   -> GREEN (6 green, 0 red)
+------------------------------------------------------------------------------
+==============================================================
+CAS : fixed / WordPress wp-6.8.12 / PHP 8.5.8
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+==============================================================================
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=
+SUMMARY : 4/4 cases GREEN
+=

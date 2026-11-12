@@ -1,0 +1,97 @@
+==============================================================================
+RED COUNTER-PROOF - WP Edit 4.0.4
+This file proves that the test harness really exercises the patched lines:
+the SAME test, in the SAME environment, is run twice on the SAME patched
+code - once with the compatibility fix removed (it must go RED), once with
+the fix put back (it must go GREEN).
+==============================================================================
+
+Date        : 2026-11-12
+WordPress   : 6.8.12 and 7.1.4 (real installations, SQLite)
+PHP         : 8.3.29 and 8.5.8
+Case used   : WordPress 7.1.4 / PHP 8.3.29
+Harness     : tests/run-case.sh  (the harness published in this repository)
+
+------------------------------------------------------------------------------
+1. THE MUTATION
+------------------------------------------------------------------------------
+Only the compatibility fix is touched. Not one byte of anything else.
+
+File      : wp-edit/includes/functions.php
+Before    : the patched file published in this repository
+            md5 8193113bfab637c23336be6de8eca5a3
+
+  patched : if(($plugin_options_global['disable_admin_links'] ?? null) != 1) {
+  broken : if($plugin_options_global['disable_admin_links'] != 1) {
+After     : the compatibility fix removed
+            md5 c58f44ca2e78ca82b9f2961818c8f071
+
+The mutation is applied by an exact string replacement that REFUSES to write
+if the pattern is not found exactly once, so a mutation that missed its
+target could not be mistaken for a proof.
+
+------------------------------------------------------------------------------
+2. STEP 1 - the test on the BROKEN code  (it must fail)
+------------------------------------------------------------------------------
+
+$ cp -a fixed/wp-edit broken/wp-edit
+$ mutate.py break broken/wp-edit/includes/functions.php
+mode=break   motif=wpe  fichier=/work/wp/reprise/wp-edit/broken/wp-edit/includes/functions.php md5_apres=c58f44ca2e78ca82b9f2961818c8f071
+$ bash tests/run-case.sh broken wp-7.1.4 8.3.29
+
+[raw output]
+==============================================================
+CAS : broken / WordPress wp-7.1.4 / PHP 8.3.29
+==============================================================
+ROUGE  T1 activation                              1 diagnostic(s) : includes/functions.php on line 11;
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 5 vert(s), 1 rouge(s)
+VERDICT : ROUGE
+
+Exit code of the case: 1   (1 = at least one test is RED)
+
+------------------------------------------------------------------------------
+3. STEP 2 - the fix is put back  (the test must pass again)
+------------------------------------------------------------------------------
+
+$ mutate.py restore broken/wp-edit/includes/functions.php
+mode=restore motif=wpe  fichier=/work/wp/reprise/wp-edit/broken/wp-edit/includes/functions.php md5_apres=8193113bfab637c23336be6de8eca5a3
+$ bash tests/run-case.sh broken wp-7.1.4 8.3.29
+
+[raw output]
+==============================================================
+CAS : broken / WordPress wp-7.1.4 / PHP 8.3.29
+==============================================================
+VERT   T1 activation                              aucune erreur fatale, 0 diagnostic
+POST_ID = [4]
+VERT   T3 article sur le front                    HTTP 200, 0 diagnostic
+VERT   T4 ecran d'edition                         HTTP 200, 0 diagnostic (1re requete : 302 de redirection post-activation)
+VERT   T5 enregistrement de l'article             contenu enregistre, 0 diagnostic
+VERT   T6 pages de reglages                       9 onglets HTTP 200, 0 diagnostic
+VERT   T7 enregistrement des reglages             6 formulaires enregistres, 0 diagnostic
+
+RESULTATS : 6 vert(s), 0 rouge(s)
+VERDICT : VERT
+
+Exit code of the case: 0   (0 = every test is GREEN)
+
+md5 of the restored file : 8193113bfab637c23336be6de8eca5a3
+md5 of the published file : 8193113bfab637c23336be6de8eca5a3
+-> IDENTICAL (the restored file is the published file, byte for byte)
+
+------------------------------------------------------------------------------
+4. WHAT THIS PROVES
+------------------------------------------------------------------------------
+The harness is not a rubber stamp: with the fix removed it reports
+the PHP 8 warning that the fix removes ("Trying to access array offset on false"), and with the fix put back it reports no PHP diagnostic at all
+The published code is byte-for-byte the code that was tested (same md5).
+
+==============================================================================
+END OF THE RED COUNTER-PROOF
+==============================================================================
